@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import BackToTop from "../components/BackToTop";
 import About from "../components/About";
 import Quote1 from "../components/Quote1";
+import Quote2 from "../components/Quote2";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Projects />
+      <Quote2 />
       <Contact />
       <BackToTop />
     </main>

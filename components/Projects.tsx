@@ -10,7 +10,7 @@ const projects = [
         title: "passForge",
         category: "Cybersecurity Tool",
         description: "Intelligence-driven password list generator with ML-based patterns and phonetic variations.",
-        link: "https://github.com/fxrhan/passForge",
+        link: "",
         color: "bg-red-500",
         image: "/passforge_bg.png"
     },
@@ -18,7 +18,7 @@ const projects = [
         title: "takeover",
         category: "Open Source Contribution",
         description: "Sub-Domain TakeOver Vulnerability Scanner.",
-        link: "https://github.com/edoardottt/takeover",
+        link: "",
         color: "bg-orange-500",
         image: "/takeover_bg.png"
     },
@@ -26,7 +26,7 @@ const projects = [
         title: "Packet-Sniffer",
         category: "Cybersecurity Tool",
         description: "A packet sniffer coded in pure python.",
-        link: "https://github.com/fxrhan/Packet-Sniffer",
+        link: "",
         color: "bg-green-500",
         image: "/packet_sniffer_bg.png"
     },
@@ -34,7 +34,7 @@ const projects = [
         title: "Web-Recon-Automation",
         category: "Automation Script",
         description: "A bash script to automate the necessary Reconnaissance task for websites.",
-        link: "https://github.com/fxrhan/Web-Recon-Automation",
+        link: "",
         color: "bg-purple-500",
         image: "/recon_bg.png"
     },
@@ -110,7 +110,7 @@ export default function Projects() {
 
                 <div className="flex justify-center">
                     <Link
-                        href="https://github.com/fxrhan"
+                        href="https://github.com/rdx-exe"
                         target="_blank"
                         className="px-8 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-white font-medium flex items-center gap-2"
                     >

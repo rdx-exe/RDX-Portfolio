@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { mateSC } from "../app/fonts";
 import { Briefcase } from "lucide-react";
 
 const experiences = [
@@ -12,13 +11,6 @@ const experiences = [
         location: "Roorkee, Uttarakhand (Remote)",
         logo: "/IIT-R.png"
     },
-    {
-        company: "CROWDSTRIKE",
-        role: "Network Engineer Intern",
-        period: "July 2024 – January 2025",
-        location: "Texas, USA (Remote)",
-        logo: "/crowdstrike.jpg"
-    }
 ];
 
 export default function Experience() {
@@ -31,7 +23,7 @@ export default function Experience() {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <h2 className={`${mateSC.className} text-3xl md:text-5xl font-extrabold mb-6 flex items-center gap-4`}>
+                    <h2 className={`text-3xl md:text-5xl font-extrabold mb-6 flex items-center gap-4`}>
                         <Briefcase className="w-8 h-8 md:w-12 md:h-12 text-white" />
                         EXPERIENCE
                     </h2>
@@ -79,14 +71,13 @@ export default function Experience() {
                                 >
                                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-2">
                                         <div className="flex items-center gap-4">
-                                            <div className={`w-12 h-12 rounded-full p-1 flex items-center justify-center overflow-hidden shrink-0 ${
-                                                // @ts-ignore
+                                            <div className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 ${
                                                 exp.transparentBg ? '' : 'bg-white'
                                                 }`}>
                                                 <img
                                                     src={exp.logo}
                                                     alt={`${exp.company} logo`}
-                                                    className="w-full h-full object-cover rounded-full"
+                                                    className="w-full h-full object-cover"
                                                 />
                                             </div>
                                             <div>

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { mateSC } from "../app/fonts";
 
 /* ------------------------------------
    SKILLS DATA USING PUBLIC ICONS
@@ -40,6 +39,7 @@ const skillsData = [
       "/icons/nextjs.png",
       "/icons/tailwind.png",
       "/icons/nodejs.png",
+      "/icons/vite.png",
     ],
   },
 ];
@@ -102,7 +102,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className={`${mateSC.className} text-3xl md:text-5xl font-bold mb-6`}>
+          <h2 className={`text-3xl md:text-5xl font-bold mb-6`}>
             SKILLS THAT FUEL MY PASSION
           </h2>
           <p className="text-muted-foreground max-w-md">
