@@ -53,7 +53,7 @@ export default function Projects() {
                     <div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-4">IMPRESSIVE WORKS</h2>
                         <p className="text-muted-foreground max-w-md">
-                            Here are some of the projects I've worked on. Each one was a unique challenge that helped me grow.
+                            Here are some of the projects I&#39;ve worked on. Each one was a unique challenge that helped me grow.
                         </p>
                     </div>
                     <Link href="https://github.com/rdx-exe?tab=repositories" target="_blank" className="hidden md:flex items-center gap-2 text-muted-foreground hover:text-white transition-colors">
