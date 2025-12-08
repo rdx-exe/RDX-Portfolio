@@ -1,6 +1,6 @@
 # 🛡️ Ritam Das - Portfolio Website
 
-A modern, responsive portfolio website for a Cyber Security Analyst built with Next.js 15, TypeScript, and Tailwind CSS.
+My modern, responsive portfolio website as a Cyber Security Enthusiast built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -52,7 +52,7 @@ A modern, responsive portfolio website for a Cyber Security Analyst built with N
 1. **Clone the repository**
    ```bash
    git clone https://github.com/rdx-exe/rdx-portfolio.git
-   cd myCyberPortfolio
+   cd RDX-Portfolio
    ```
 
 2. **Install dependencies**
