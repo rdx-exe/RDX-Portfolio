@@ -68,14 +68,20 @@ export default function Header() {
     return (
         <header
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-                scrolled ? "bg-black/80 backdrop-blur-md border-white/10 py-4" : "bg-transparent py-6"
+                "fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300",
+                "rounded-full px-4 md:px-8 shadow-lg backdrop-blur-xl",
+                scrolled
+                    ? "bg-black/80 border border-white/10 py-3"
+                    : "bg-black/40 border border-transparent py-4"
             )}
+            style={{ width: "90%", maxWidth: "1100px" }}
         >
-            <div className="max-w-7xl mx-auto px-4 md:px-10 flex justify-between items-center">
+            <div className="w-full flex justify-between items-center">
                 <Link href="#" className="flex items-center gap-2 text-xl font-bold tracking-tighter">
                     <Terminal className="w-6 h-6 text-white" />
-                    <span>RDX<span className="text-primary">.</span></span>
+                    <span>
+                        RDX<span className="text-primary">.</span>
+                    </span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -84,7 +90,8 @@ export default function Header() {
                         const isRoute = item.href.startsWith("/");
                         const isActive = isRoute
                             ? pathname === item.href
-                            : activeSection === item.href.substring(1) || (item.href === "#" && activeSection === "");
+                            : activeSection === item.href.substring(1) ||
+                              (item.href === "#" && activeSection === "");
                         const isExternal = item.external;
 
                         return (
@@ -113,10 +120,7 @@ export default function Header() {
                 </nav>
 
                 {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
+                <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <X /> : <Menu />}
                 </button>
             </div>
@@ -129,7 +133,7 @@ export default function Header() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-white/10 overflow-hidden md:hidden"
+                        className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-white/10 overflow-hidden md:hidden rounded-b-2xl"
                     >
                         <nav className="flex flex-col p-4 gap-2">
                             {navItems.map((item, index) => (
