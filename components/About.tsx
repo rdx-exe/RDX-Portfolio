@@ -13,9 +13,9 @@ export default function About() {
                         initial={{ opacity: 0, y: 8 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className={`text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight text-center mb-4`}
+                        className={`text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-center mb-4`}
                     >
-                        Hey There!! I&apos;m Ritam
+                        Myself RITAM DAS!
                     </motion.h1>
                 </div>
             </header>
