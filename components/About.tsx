@@ -15,7 +15,7 @@ export default function About() {
                         viewport={{ once: true }}
                         className={`text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-center mb-4`}
                     >
-                        Myself RITAM DAS!
+                        Hey there! I&apos;m Ritam.
                     </motion.h1>
                 </div>
             </header>
