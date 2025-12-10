@@ -23,7 +23,7 @@ export default function Contact() {
         setFormSubmitted(true);
         setTimeout(() => {
             setFormSubmitted(false);
-            setFormData({ name: "", message: "" });
+            setFormData({ name: "", email: "", message: "" });
         }, 3000);
     };
 

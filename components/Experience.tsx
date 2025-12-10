@@ -80,9 +80,7 @@ export default function Experience() {
                                         >
                                             <motion.div
                                                 whileHover={{ rotate: 10, scale: 1.1 }}
-                                                className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 ${
-                                                    exp.transparentBg ? '' : 'bg-white'
-                                                }`}
+                                                className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden shrink-0 bg-white"
                                             >
                                                 <img
                                                     src={exp.logo}
