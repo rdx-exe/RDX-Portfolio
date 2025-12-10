@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { mateSC } from "../app/fonts";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
     return (
@@ -104,21 +103,6 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 </motion.div>
             </div>
-
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            >
-                <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                    <ChevronDown className="w-6 h-6 text-white/40 hover:text-white/60 transition-colors cursor-pointer" />
-                </motion.div>
-            </motion.div>
         </section>
     );
 }
