@@ -77,12 +77,14 @@ export default function Header() {
             style={{ width: "90%", maxWidth: "1100px" }}
         >
             <div className="w-full flex justify-between items-center">
-                <Link href="#" className="flex items-center gap-2 text-xl font-bold tracking-tighter">
-                    <Terminal className="w-6 h-6 text-white" />
-                    <span>
-                        RDX<span className="text-primary">.</span>
-                    </span>
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Link href="#" className="flex items-center gap-2 text-xl font-bold tracking-tighter hover:text-orange-500 transition-colors">
+                        <Terminal className="w-6 h-6 text-white" />
+                        <span>
+                            RDX<span className="text-orange-500">.</span>
+                        </span>
+                    </Link>
+                </motion.div>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
@@ -95,34 +97,42 @@ export default function Header() {
                         const isExternal = item.external;
 
                         return (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                target={isExternal ? "_blank" : undefined}
-                                className={cn(
-                                    "text-sm font-medium transition-colors relative",
-                                    isActive && !isExternal ? "text-white" : " hover:text-white"
-                                )}
-                            >
-                                {item.name}
-                                {isActive && !isExternal && (
-                                    <motion.div
-                                        layoutId="activeNav"
-                                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ duration: 0.3 }}
-                                    />
-                                )}
-                            </Link>
+                            <motion.div key={item.name} whileHover={{ y: -2 }}>
+                                <Link
+                                    href={item.href}
+                                    target={isExternal ? "_blank" : undefined}
+                                    className={cn(
+                                        "text-sm font-medium transition-all relative py-1 px-3 rounded-lg",
+                                        isActive && !isExternal
+                                            ? "text-orange-500 bg-orange-500/10"
+                                            : "text-white/60 hover:text-white hover:bg-white/5"
+                                    )}
+                                >
+                                    {item.name}
+                                    {isActive && !isExternal && (
+                                        <motion.div
+                                            layoutId="activeNav"
+                                            className="absolute -bottom-0.5 left-0 right-0 h-1 bg-orange-500 rounded-full"
+                                            initial={{ opacity: 0, scaleX: 0 }}
+                                            animate={{ opacity: 1, scaleX: 1 }}
+                                            transition={{ duration: 0.3 }}
+                                        />
+                                    )}
+                                </Link>
+                            </motion.div>
                         );
                     })}
                 </nav>
 
                 {/* Mobile Menu Button */}
-                <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="md:hidden text-white hover:text-orange-500 transition-colors"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
                     {isOpen ? <X /> : <Menu />}
-                </button>
+                </motion.button>
             </div>
 
             {/* Mobile Nav */}
@@ -147,7 +157,7 @@ export default function Header() {
                                     <Link
                                         href={item.href}
                                         target={item.external ? "_blank" : undefined}
-                                        className="block text-lg font-medium hover:text-white transition-colors py-2 px-4 rounded-lg hover:bg-white/5"
+                                        className="block text-lg font-medium text-white/70 hover:text-orange-500 transition-colors py-2 px-4 rounded-lg hover:bg-orange-500/10"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {item.name}
