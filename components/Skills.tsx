@@ -45,7 +45,7 @@ const skillsData = [
 ];
 
 /* ------------------------------------
-   INFINITE LOGO LOOP WITH RESPONSIVE SPEED
+   INFINITE LOGO LOOP WITH REVERSE
 -------------------------------------*/
 function LogoLoop({
   logos,
@@ -55,11 +55,6 @@ function LogoLoop({
   reverse?: boolean;
 }) {
   const doubled = [...logos, ...logos];
-
-  // ⚡ Faster on mobile, normal on desktop
-  const isMobile =
-    typeof window !== "undefined" && window.innerWidth < 768;
-  const duration = isMobile ? 8 : 15;
 
   return (
     <div
@@ -72,11 +67,11 @@ function LogoLoop({
       <motion.div
         className="flex gap-16"
         animate={{
-          x: reverse ? ["-50%", "0%"] : ["0%", "-50%"],
+          x: reverse ? ["-50%", "0%"] : ["0%", "-50%"], // 👈 direction logic
         }}
         transition={{
           repeat: Infinity,
-          duration,
+          duration: 15,
           ease: "linear",
         }}
       >
@@ -126,7 +121,7 @@ export default function Skills() {
               viewport={{ once: true }}
             >
               {/* Section Title */}
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-orange-500">
                 {group.title}
               </h3>
 

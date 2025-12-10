@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Contact() {
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [formData, setFormData] = useState({ name: "", message: "" });
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
     const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -99,6 +99,18 @@ export default function Contact() {
                                 required
                                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-orange-500/50 focus:bg-white/10 transition-all"
                                 placeholder="John Doe"
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-white/70 text-sm font-medium mb-2">Your Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleFormChange}
+                                required
+                                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-orange-500/50 focus:bg-white/10 transition-all"
+                                placeholder="john@example.com"
                             />
                         </div>
                         <div>

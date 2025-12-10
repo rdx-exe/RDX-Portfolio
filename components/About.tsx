@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Linkedin, Github, Twitter, Mail } from "lucide-react";
-import { mateSC } from "../app/fonts";
 
 export default function About() {
     return (
@@ -14,7 +13,7 @@ export default function About() {
                         initial={{ opacity: 0, y: 8 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className={`${mateSC.className} text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-center mb-4`}
+                        className={`text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-center mb-4`}
                     >
                         Hey there! I&apos;m Ritam.
                     </motion.h1>
